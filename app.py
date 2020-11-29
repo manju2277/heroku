@@ -13,7 +13,7 @@ def after():
   img.save('./static/file.jpg')
   image=cv2.imread('./static/file.jpg')
   gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-  cascade = cv2.CascadeClassifier('/content/haarcascade_frontalface_alt2.xml')
+  cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt2.xml')
   faces = cascade.detectMultiScale(gray, 1.1, 3)
 
   for x,y,w,h in faces:
@@ -38,9 +38,9 @@ def after():
   image = np.reshape(image, (1,48,48,1))
 
   #load model
-  model = model_from_json(open("/content/model.json", "r").read())
+  model = model_from_json(open("model.json", "r").read())
   #load weights
-  model.load_weights('/content/modelweights.h5')
+  model.load_weights('modelweights.h5')
 
 
   prediction = model.predict(image)
