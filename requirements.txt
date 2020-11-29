@@ -5,6 +5,7 @@ Jinja2==2.10.1
 MarkupSafe==1.1.1
 Werkzeug==0.15.5
 keras==1.2.2
+OpenCV==3.4.9
 numpy>=1.9.2
 scipy>=0.15.1
 matplotlib>=1.4.3
